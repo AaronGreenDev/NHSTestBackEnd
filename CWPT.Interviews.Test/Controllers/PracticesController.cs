@@ -35,7 +35,7 @@ namespace CWPT.Interviews.Test.Controllers
         }
 
 
-        //Get Practises by ID
+        //Get Practise by ID
         [HttpGet]
         [Route("{id}")]
         public async Task<ActionResult<Practice>> GetById(int id)
@@ -106,6 +106,7 @@ namespace CWPT.Interviews.Test.Controllers
             return NoContent();
         }
 
+        //Check if practise exists
         private bool PracticeExists(long id)
         {
             return _context.Practices.Any(e => e.Id == id);
